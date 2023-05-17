@@ -1,0 +1,71 @@
+
+
+/* Style the top navigation bar */
+.navbar {
+overflow: hidden; /* Hide overflow */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+display: block; /* Change the display to block, for responsive reasons (see below) */
+color: #3f6b4b; /* White text color */
+font-size:25px;
+text-align: center; /* Center the text */
+padding: 10px 20px; /* Add some padding */
+text-decoration: none; /* Remove underline */
+}
+
+
+.navbar a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+    }
+
+
+/* Right-aligned link */
+.navbar a.right {
+float: right; /* Float a link to the right */
+}
+
+
+.clearfix {
+background-size: cover;
+height: 70vh;
+display: flex;
+justify-content: left;
+align-items: center;
+margin-left: 100px;
+margin-right: 100px;
+
+}
+
+.jumbotron-content {
+margin-left: 30px;
+}
+
+.jumbotron-content p {
+    font-size:18px;
+    }
+
+.jumbotron-content h1 {
+    font-size:55px;
+    }
+
+.clearfix img {
+    margin-right: 0px;
+    }
+
+
+
+/* Social Icon */
+.jumbotron-content social-icons {
+margin-top: 100px;
+}
+
+.social-icons a {
+margin-left:10px;
+margin-top: 10px;
+color: #3f6b4b;
+font-size:12px;
+}
+

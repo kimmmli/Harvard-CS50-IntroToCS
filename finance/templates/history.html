@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Stock name</th>
+                <th scope="col">Stock symbol</th>
+                <th scope="col">Number of shares</th>
+                <th scope="col" >Price per stock</th>
+                <th scope="col">State</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ lookup(record.symbol)["name"] }}</td>
+                    <td>{{ record.symbol }}</td>
+                    <td>{{ record.shares }}</td>
+                    <td>{{ record.price }}</td>
+                    <td>{{ record.type }}</td>
+                    <td>{{ record.time }}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+

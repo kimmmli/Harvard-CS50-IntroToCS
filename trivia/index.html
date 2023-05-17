@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded',function(){
+                let cor=document.querySelector('.co');
+                cor.addEventListener('click',function(){
+                    cor.style.backgroundColor='green';
+                    document.querySelector('#fb1').innerHTML='Correct';
+                });
+
+                let incor=document.querySelectorAll('.inco');
+                for (let i=0; i<incor.length;i++)
+                {
+                incor[i].addEventListener('click',function(){
+                    incor[i].style.backgroundColor='red';
+                    document.querySelector('#fb1').innerHTML='Incorrect';
+                });
+                }
+
+                let check=document.querySelector('#check');
+                check.addEventListener('click',function(){
+                    let input=document.querySelector('input');
+                    if (input.value ==='Kim'){
+                        input.style.backgroundColor='green';
+                        document.querySelector('#fb2').innerHTML="Correct!";
+
+                    }else{
+                        input.style.backgroundColor='red';
+                        document.querySelector('#fb2').innerHTML="Incorrect!";
+                    }
+                });
+
+        });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <button class="inco">6 people per 1 sheep</button>
+                <button class="inco">2 people per 1 sheep</button>
+                <button class="co">1 people per 1 sheep</button>
+
+                <p id="fb1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3> What's the most beautiful girl in the world?</h3>
+                <input autofocus name="q" placeholder="Your Answer" type="text"></input>
+                <button id="check">Check Your Answer!</button>
+
+                <p id="fb2"></p>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>

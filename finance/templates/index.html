@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Stock owns</th>
+                <th scope="col">Number of shares</th>
+                <th scope="col" >Current Price per stock</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for record in records %}
+                {% if record.shares !=0 %}
+                <tr>
+                    <td>{{ lookup(record.symbol)["name"] }}</td>
+                    <td>{{ record.shares }}</td>
+                    <td>{{ lookup(record.symbol)["price"] }}</td>
+                    <td>{{ record.shares * lookup(record.symbol)["price"] }}</td>
+
+                </tr>
+                {% endif %}
+            {% endfor %}
+                <tr>
+                    <td colspan="2"> </td>
+                    <th> Cash </td>
+                    <td> {{cash}} </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> </td>
+                    <th> Total </td>
+                    <td> {{cash+total}}</td>
+                </tr>
+
+        </tbody>
+    </table>
+{% endblock %}
+
+
