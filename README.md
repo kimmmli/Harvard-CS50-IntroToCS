@@ -1,5 +1,5 @@
 # HarvardCS50projects
-This repository contains all my CS50 projects.
+This repository contains all my CS50: introduction to computer science projects.
 
 It includes all topics covered in CS50, including 
 Week 0 Scratch
